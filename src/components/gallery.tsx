@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardBody, Image, Chip } from "@heroui/react";
-import { subtitle, title } from "./primitives";
+import { title } from "./primitives";
 const projects = [
   {
     title: "AFH: Metalmecánicos",
