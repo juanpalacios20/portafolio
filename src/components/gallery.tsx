@@ -1,25 +1,26 @@
 import { Card, CardHeader, CardBody, Image, Chip } from "@heroui/react";
+
 import { title } from "./primitives";
 const projects = [
   {
     title: "AFH: Metalmecánicos",
     description:
       "Sistema integral para la gestión de inventario, herramientas, cotizaciones, órdenes de trabajo y administración financiera de la empresa AFH: Metalmecánicos. La plataforma permite realizar seguimientos detallados a los avances de trabajo, generar actas de entrega y visualizar reportes a través de gráficos interactivos, optimizando así los procesos internos de la organización.",
-    image: "public/afh.jpg",
+    image: "/afh.jpg",
     technologies: ["Angular", "Django", "Sqlite", "Vercel", "Render"],
   },
   {
     title: "Nicelook",
     description:
       "Aplicación web desarrollada como proyecto académico para la peluquería Stylo's en Palmira. Permite a los clientes gestionar sus citas en línea, mientras que el establecimiento administra fácilmente su agenda y disponibilidad de servicios.",
-    image: "public/nicelook.jpg",
+    image: "/nicelook.jpg",
     technologies: ["React", "Django", "PostgreSQL"],
   },
   {
     title: "Bomberos Santa Elena",
     description:
       "Plataforma web para la estación de Bomberos Voluntarios de Santa Elena, diseñada para gestionar turnos e ingresos del personal operativo mediante validación por huella digital y códigos QR. Automatiza el control de asistencia y mejora la trazabilidad del equipo de trabajo.",
-    image: "public/bomberos.jpg",
+    image: "/bomberos.jpg",
     technologies: ["React", "Flask", "MySQL"],
   },
 ];
@@ -61,10 +62,10 @@ const Gallery: React.FC = () => {
                     <section className="flex flex-row flex-wrap gap-2 mt-1">
                       {project.technologies?.map((tech, i) => (
                         <Chip
+                          key={i}
+                          className="text-white"
                           color="primary"
                           variant="shadow"
-                          className="text-white"
-                          key={i}
                         >
                           {tech}
                         </Chip>
